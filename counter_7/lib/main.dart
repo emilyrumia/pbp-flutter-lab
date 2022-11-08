@@ -77,6 +77,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     bool check = _counter % 2 == 0;
+    bool isVisible = _counter > 0;
 
     // This method is rerun every time setState is called, for instance as done
     // by the _incrementCounter method above.
@@ -130,15 +131,18 @@ class _MyHomePageState extends State<MyHomePage> {
         floatingActionButton: Stack(
           fit: StackFit.expand,
           children: [
-            Positioned(
-              left: 30,
-              bottom: 20,
-              child: FloatingActionButton(
-                tooltip: 'Decrement',
-                onPressed: _decrementCounter,
-                child: const Icon(
-                  Icons.remove,
-                  size: 40,
+            Visibility(
+              visible: isVisible,
+              child: Positioned(
+                left: 30,
+                bottom: 20,
+                child: FloatingActionButton(
+                  tooltip: 'Decrement',
+                  onPressed: _decrementCounter,
+                  child: const Icon(
+                    Icons.remove,
+                    size: 40,
+                  ),
                 ),
               ),
             ),
