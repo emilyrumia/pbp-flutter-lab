@@ -5,9 +5,31 @@
 ## Tugas 7: *"counter_7"*  
 
 ## 💡 Jelaskan apa yang dimaksud dengan stateless widget dan stateful widget dan jelaskan perbedaan dari keduanya.
+Stateless Widget adalah widget statis dimana seluruh konfigurasi yang dimuat didalamnya telah diinisiasi sejak awal. Widget ini tidak dapat diubah dan tidak akan pernah berubah. Contoh stateless widget adalah Icon, IconButton, dan Text.
+
+Stateful Widget adalah  sifatnya adalah dinamis, sehingga widget ini dapat diperbaharui kapanpun dibutuhkan berdasarkan user actions atau ketika terjadinya perubahan data. Stateful widget dapat mengubah atau mengupdate tampilan, menambah widget laiinya, mengubah nilai variabel, icon, warna dan masih banyak lagi. Contoh stateful widget adalah Checkbox,  Radio, Form, dan TextField.
+
 ## 💡 Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+1. `AppBar`, salah satu bagian yang umumnya digunakan pada sebuah aplikasi sebagai menu petunjuk untuk memudahkan pengguna aplikasi. Menyediakan Properti `title` untuk judul
+2. `Center`, memposisikan widget child di tengah
+3. `Column`, memposisikan widget chlidren secara vertikal
+4. `FloatingActionButton`, seperti button yang ketika di click menjalan suatu fungsi
+5. `Text`, menampilkan sebuah string 
+6. `Positioned`, mengatur posisi child widget 
+7. `Stack`, menampilkan widget child secara bertumpuk 
+8. `Visibility`, mengatur visibility widget child
+9. `Icon`, graphical icon widget
+
 ## 💡 Apa fungsi dari setState()? Jelaskan variabel apa saja yang dapat terdampak dengan fungsi tersebut.
+setState() memberitahu flutter framework bahwa ada yang berubah pada State, setelah itu akan melakukan build ulang untuk merubah value pada variabel tersebut. Fungsi ini merencanakan suatu pembaruan ke suatu state objek komponen. Ketika state berubah, komponen merespons dengan me-render ulang. 
+
+Variabel yang terdampak dengan fungsi tersebut dalah variabel yang berubah jika fungsi tersebut dijalankan/dipanggil. Pada tugas ini, variabel _counter yang terdampak yaitu bertambah satu satuan saat fungsi _incrementCounter() dipanggil dan berkurang satu satuan jika _counter lebih dari 0 saat fungsi _decrementCounter() dipanggil.
+
 ## 💡 Jelaskan perbedaan antara const dengan final.
+Final (variabel yang menggunakan keyword final) diinialisasi pada saat pertama kali digunakan dan hanya disetel sekali. Dengan kata lain nilai final akan diketahui pada saat run-time. final dapat digunakan untuk deklarasi variabel immutable yang `nilainya sudah ataupun belum diketahui pada saat waktu kompilasi berjalan`.
+
+Const dapat digunakan untuk deklarasi variabel immutable yang `nilainya bersifat konstan dan harus sudah diketahui pada saat waktu kompilasi (Compile time) berjalan`, artinya adalah nilai dari variabel tersebut harus sudah di berikan value secara langsung.
+
 ## 💡 Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
 - [x] Membuat sebuah program Flutter baru dengan nama counter_7.<br>
 -> Generate proyek Flutter dan masuk ke dalam direktori proyek.<br>
