@@ -2,6 +2,9 @@
 
 > by Emily Rumia Naomi - 2106652700
 
+<details>
+<summary>Tugas 7</summary>
+
 ## Tugas 7: *"counter_7"*  
 
 ## 💡 Jelaskan apa yang dimaksud dengan stateless widget dan stateful widget dan jelaskan perbedaan dari keduanya.
@@ -139,6 +142,47 @@ Const dapat digunakan untuk deklarasi variabel immutable yang `nilainya bersifat
   - [x] Angka 0 dianggap sebagai angka genap.<br>
   -> `_counter % 2 == 0` sudah memastikan bahwa 0 dianggap sebagai angka genap
 
-  
+</details>
+
+<details>
+<summary>Tugas 8</summary>
+
+## Tugas 8: *" budget tracking app"*  
+
+## 💡 Jelaskan perbedaan Navigator.push dan Navigator.pushReplacement.
+`Navigator.push` adalah metode yang menampilkan halaman baru di atas halaman sebelumnya (ditimpa). Berbeda dengan `Navigator.pushReplacement` yang mengantikan halaman sebelumnya dengan halaman baru. 
+
+## 💡 Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+1. `AppBar`, salah satu bagian yang umumnya digunakan pada sebuah aplikasi sebagai menu petunjuk untuk memudahkan pengguna aplikasi. Menyediakan Properti `title` untuk judul
+2. `Center`, memposisikan widget child di tengah
+3. `Column`, memposisikan widget chlidren secara vertikal
+4. `Drawer`, panel untuk navigasi
+5. `Text`, menampilkan sebuah string 
+6. `TextFormField`, input form berupa string
+7. `Stack`, menampilkan widget child secara bertumpuk 
+8. `Form`, membuat form
+9. `Icon`, graphical icon widget
+10. `IconButton`, membuat button dengan bentuk sebuah icon
+11. `DropdownButton`, input dengan pilihan
+12. `Expanded`, mengisi widget child di space yang masih kosong
+13. `TextButton`, button dengan sebuah tulisan
+14. `Card`, membuat layout card
+
+## 💡 Sebutkan jenis-jenis event yang ada pada Flutter
+1. onPressed(), execute suatu fungsi ketika mengklik sebuah button
+2. onTap(), execute suatu fungsi ketika mengklik sebuah widget satu kali
+3. onChanged(), execute suatu fungsi ketika merubah suatu value pada sebuah widget
+4. onSaved(), execute suatu fungsi ketika menyimpan sebuah form
+
+## 💡 Jelaskan bagaimana cara kerja Navigator dalam "mengganti" halaman dari aplikasi Flutter.
+Logic navigasi pada flutter bekerja seperti sebuah stack. Stack tersebut juga menyimpan data, bedanya data yang disimpan berupa halaman. Data pada top of stack adalah halaman yang muncul kepada pengguna. Metode push akan menjalankan logic mengganti halaman dengan menambahkan halaman baru pada top of stack sehingga halaman sebelumnya ditimpa (Navigator.push) atau digantikan (Navigator.pushReplacement) dan halaman baru tersebut yang muncul di layar pengguna. Metode pop kebalikannya akan top of stack dan menampilkan halaman sebelumnya kepada pengguna.
+
+## 💡 Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+- Membuka folder aplikasi flutter `counter_7` pada tugas 7
+- Membuat file `drawer.dart` untuk membuat widget drawer sebagai navigasi antar halaman program counter, tambah budget, dan data budget.
+- Membuat file `budget.dart` untuk membuat class `Budget` yang akan menyimpan attribut-attribut dari object `Budget` dan menyimpan semua object `Budget` pada list static `listBudget`.
+- Membuat file`form.dart` untuk membuat form yang menerima input `_judul` berupa string dengan widget TextFormField, input _nominal berupa integer dengan widget TextFormField yang nantinya dari string akan di parse menjadi int, dan input `_tipe` berupa stirng dengan widget DropdownButton sehingga terdapat pilihan dari list string yang berisi Pemasukan dan Pengeluaran. Setelah itu, terdapat tombol dengan event onPressed() untuk menyimpan form dan membuat object `Budget` serta menambahkan object pada `listBudget` dengan widget TextButton.
+- Membuat file `data.dart` untuk menampilkan semua object yang ada di `listBudget`. Jika tidak ada object maka akan menampilkan tulisan "Tidak ada budget!". Jika ada, maka object akan ditampilkan dengan layout card menggunakan widget card.
+
 
 
