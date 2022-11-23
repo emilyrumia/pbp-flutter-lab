@@ -183,6 +183,52 @@ Logic navigasi pada flutter bekerja seperti sebuah stack. Stack tersebut juga me
 - Membuat file `budget.dart` untuk membuat class `Budget` yang akan menyimpan attribut-attribut dari object `Budget` dan menyimpan semua object `Budget` pada list static `listBudget`.
 - Membuat file`form.dart` untuk membuat form yang menerima input `_judul` berupa string dengan widget TextFormField, input `_nominal` berupa integer dengan widget TextFormField yang nantinya dari string akan di parse menjadi int, dan input `_tipe` berupa stirng dengan widget DropdownButton sehingga terdapat pilihan dari list string yang berisi Pemasukan dan Pengeluaran. Setelah itu, terdapat tombol dengan event `onPressed()` untuk menyimpan form dan membuat object `Budget` serta menambahkan object pada `listBudget` dengan widget TextButton.
 - Membuat file `data.dart` untuk menampilkan semua object yang ada di `listBudget`. Jika tidak ada object maka akan menampilkan tulisan "Tidak ada budget!". Jika ada, maka object akan ditampilkan dengan layout card menggunakan widget card.
+</details>
 
+<details>
+<summary>Tugas 9</summary>
 
+## Tugas 9: *"mywatchlist"*
 
+## 💡 Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+Iya, Kita tetap bisa melakukan pengambilan data JSON tanpa membuat model terlebih dahulu. Sehingga, data tersebut akan di simpan pada suatu variable tanpa dikonversi menjadi data dalam sebuah model. Namun, sebaiknya model dibuat terlebih dahulu agar menyimpan data lebih terstruktur pada List yang bertipe class model tersebut.
+
+## 💡 Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+1. `AppBar`, salah satu bagian yang umumnya digunakan pada sebuah aplikasi sebagai menu petunjuk untuk memudahkan pengguna aplikasi. Menyediakan Properti `title` untuk judul
+2. `Center`, memposisikan widget child di tengah
+3. `Column`, memposisikan widget chlidren secara vertikal
+4. `Drawer`, panel untuk navigasi
+5. `Text`, menampilkan sebuah string 
+6. `TextFormField`, input form berupa string
+7. `Stack`, menampilkan widget child secara bertumpuk 
+8. `Form`, membuat form
+9. `Icon`, graphical icon widget
+10. `IconButton`, membuat button dengan bentuk sebuah icon
+11. `DropdownButton`, input dengan pilihan
+12. `Expanded`, mengisi widget child di space yang masih kosong
+13. `TextButton`, button dengan sebuah tulisan
+14. `Card`, membuat layout card
+
+## 💡 Jelaskan mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter.
+Dengan package http HTTP request dapat dijalankan dan dengan perlu ditambahkan kode untuk mengatur dependensi HTTP. Data akan di fetch dengan API endpoint yang nantinya di-decode menjadi data berbentuk JSON. Setelah proses http tersebut selesai, data yang sudah berbentuk JSON tersebut akan dikonversi menjadi data dalam bentuk sebuah model dan dimasukan ke dalam list yang bertipe class model tersebut agar nantinya dapat ditampilkan pada aplikasi Flutter dengan  listview.builder untuk merender setiap widget.
+ 
+## 💡 Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+- Membuka folder aplikasi flutter `counter_7` pada tugas 7
+- Membuka file `drawer.dart` untuk menambahkan pada widget drawer navigasi ke halaman `My Watch List`
+- Membuat file `movie.dart` untuk membuat class `Movie` yang akan menyimpan attribut-attribut dari object `Movie` berdasarkan json heroku pada tugas 3 
+- Menambahkan Dependensi HTTP
+  - Menjalankan `flutter pub add http`
+  - Menambahkan kode berikut pada file `android/app/src/main/AndroidManifest.xml`
+    ```shell
+    ...
+    <application>
+    ...
+    </application>
+    <!-- Required to fetch data from the Internet. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    ...
+    ```
+- Membuat file `fetch_mywatchlist.dart` untuk mengambil dan mengolah data dari Web Service, yaitu dari URL https://appkatalog.herokuapp.com/mywatchlist/json/
+- Membuat file`mywatchlist.dart` untuk halaman menampilkan judul-judul dari semua object `Movie` yang di dapat dari file `fetch_mywatchlist.dart` dan menambahkan button untuk melihat detail setiap film. Jika tidak ada object maka akan menampilkan tulisan "Kamu tidak punya watchlist :(". Jika ada, maka object akan ditampilkan dengan layout card menggunakan widget card.
+- Membuat file `detail.dart` untuk menampilkan detail setiap filmnya yang diklik dengan button. 
+</details>
