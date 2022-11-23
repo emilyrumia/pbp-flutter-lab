@@ -15,7 +15,7 @@ Stateful Widget adalah  sifatnya adalah dinamis, sehingga widget ini dapat diper
 ## 💡 Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
 1. `AppBar`, salah satu bagian yang umumnya digunakan pada sebuah aplikasi sebagai menu petunjuk untuk memudahkan pengguna aplikasi. Menyediakan Properti `title` untuk judul
 2. `Center`, memposisikan widget child di tengah
-3. `Column`, memposisikan widget chlidren secara vertikal
+3. `Column`, memposisikan widget children secara vertikal
 4. `FloatingActionButton`, seperti button yang ketika di click menjalan suatu fungsi
 5. `Text`, menampilkan sebuah string 
 6. `Positioned`, mengatur posisi child widget 
@@ -155,7 +155,7 @@ Const dapat digunakan untuk deklarasi variabel immutable yang `nilainya bersifat
 ## 💡 Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
 1. `AppBar`, salah satu bagian yang umumnya digunakan pada sebuah aplikasi sebagai menu petunjuk untuk memudahkan pengguna aplikasi. Menyediakan Properti `title` untuk judul
 2. `Center`, memposisikan widget child di tengah
-3. `Column`, memposisikan widget chlidren secara vertikal
+3. `Column`, memposisikan widget children secara vertikal
 4. `Drawer`, panel untuk navigasi
 5. `Text`, menampilkan sebuah string 
 6. `TextFormField`, input form berupa string
@@ -195,19 +195,17 @@ Iya, Kita tetap bisa melakukan pengambilan data JSON tanpa membuat model terlebi
 
 ## 💡 Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
 1. `AppBar`, salah satu bagian yang umumnya digunakan pada sebuah aplikasi sebagai menu petunjuk untuk memudahkan pengguna aplikasi. Menyediakan Properti `title` untuk judul
-2. `Center`, memposisikan widget child di tengah
-3. `Column`, memposisikan widget chlidren secara vertikal
+2. `Row`, memposisikan widget children secara horizontal
+3. `Column`, memposisikan widget children secara vertikal
 4. `Drawer`, panel untuk navigasi
 5. `Text`, menampilkan sebuah string 
-6. `TextFormField`, input form berupa string
-7. `Stack`, menampilkan widget child secara bertumpuk 
-8. `Form`, membuat form
-9. `Icon`, graphical icon widget
-10. `IconButton`, membuat button dengan bentuk sebuah icon
-11. `DropdownButton`, input dengan pilihan
-12. `Expanded`, mengisi widget child di space yang masih kosong
-13. `TextButton`, button dengan sebuah tulisan
-14. `Card`, membuat layout card
+6. `FutureBuilder`, membentuk widget berdasarkan data terbaru yang di dapat 
+7. `Container`, membentuk suatu container widget yang mengatur painting, positioning, dan sizing widgets.
+8. `CheckBox`, membetuk checkbox
+9. `InkWell`, mengatur behavior yang dilakukan child jika diklik
+10. `ElevatedButton`, button dengan dimensi
+11. `ListView`, membuat widget yang dapat di scroll 
+12. `Align`, mengatur widget berdasarkan posisi align yang ditentukan
 
 ## 💡 Jelaskan mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter.
 Dengan package http HTTP request dapat dijalankan dan dengan perlu ditambahkan kode untuk mengatur dependensi HTTP. Data akan di fetch dengan API endpoint yang nantinya di-decode menjadi data berbentuk JSON. Setelah proses http tersebut selesai, data yang sudah berbentuk JSON tersebut akan dikonversi menjadi data dalam bentuk sebuah model dan dimasukan ke dalam list yang bertipe class model tersebut agar nantinya dapat ditampilkan pada aplikasi Flutter dengan  listview.builder untuk merender setiap widget.
